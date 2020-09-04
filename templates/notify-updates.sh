@@ -1,6 +1,6 @@
 #! /bin/sh
 
-UPDATES=$(yum check-update --quiet | grep -v "^$")
+UPDATES=$(apt-get upate --quiet | grep -v "^$")
 UPDATES_COUNT=$(echo -n "$UPDATES" | wc -l)
 
 if [[ $UPDATES_COUNT -gt 0 ]]; then
