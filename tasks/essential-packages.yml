@@ -1,16 +1,16 @@
 ---
 - name: Install epel-release
-  yum:
+  apt:
     name: epel-release
     state: present
 
 - name: Install essential packages
-  yum:
-    name: ['yum-utils', 'net-tools', 'whois', 'htop', 'lvm2', 'gdisk', 'lsof', 'python2-pip', 'net-tools', 'gcc', "chrony", 'cronie', 'cronie-anacron', 'bind-utils', 'vim', 'wget', 'curl', 'screen']
+  apt:
+    name: [ 'net-tools', 'whois', 'htop', 'lvm2', 'gdisk', 'lsof', 'python2-pip', 'net-tools', 'gcc', "chrony", 'cronie', 'cronie-anacron', 'bind-utils', 'vim', 'wget', 'curl', 'screen']
     state: present
 
 - name: Install iSCSI initiation for some Kubernetes storage solutions
-  yum:
+  apt:
     name: iscsi-initiator-utils
     state: present
 
