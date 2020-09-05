@@ -1,9 +1,4 @@
 ---
-- name: Install epel-release
-  apt:
-    name: epel-release
-    state: present
-
 - name: Install essential packages
   apt:
     name: [ 'net-tools', 'whois', 'htop', 'lvm2', 'gdisk', 'lsof', 'python2-pip', 'net-tools', 'gcc', "chrony", 'cronie', 'cronie-anacron', 'bind-utils', 'vim', 'wget', 'curl', 'screen']
