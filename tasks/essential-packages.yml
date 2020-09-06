@@ -5,12 +5,6 @@
     state: present
 
 
-- name: Ensure cron is running
-  service:
-    name: crond
-    state: started
-    enabled: yes
-
 - name: Ensure chronyd is running
   service:
     name: chronyd
