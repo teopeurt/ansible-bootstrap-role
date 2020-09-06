@@ -3,12 +3,6 @@
   timezone:
     name: Etc/UTC
 
-- name: Restart Cron service
-  service:
-    name: crond
-    state: restarted
-    enabled: yes
-
 - name: Install rsyslog
   package:
     name: rsyslog
