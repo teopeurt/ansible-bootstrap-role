@@ -4,21 +4,6 @@
     name: [ 'net-tools', 'whois', 'htop', 'lvm2', 'gdisk', 'lsof', 'net-tools', 'gcc', "chrony", 'vim', 'wget', 'curl', 'screen']
     state: present
 
-- name: Install iSCSI initiation for some Kubernetes storage solutions
-  apt:
-    name: iscsi-initiator-utils
-    state: present
-
-- name: Ensure iscsid is running
-  service:
-    name: iscsid
-    state: started
-    enabled: yes
-
-- name: Add the iscsi_tcp module
-  modprobe:
-    name: iscsi_tcp
-    state: present
 
 - name: Ensure cron is running
   service:
