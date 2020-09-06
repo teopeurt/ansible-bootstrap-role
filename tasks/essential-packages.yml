@@ -1,7 +1,7 @@
 ---
 - name: Install essential packages
   apt:
-    name: [ 'net-tools', 'whois', 'htop', 'lvm2', 'gdisk', 'lsof', 'net-tools', 'gcc', "chrony", 'bind-utils', 'vim', 'wget', 'curl', 'screen']
+    name: [ 'net-tools', 'whois', 'htop', 'lvm2', 'gdisk', 'lsof', 'net-tools', 'gcc', "chrony", 'vim', 'wget', 'curl', 'screen']
     state: present
 
 - name: Install iSCSI initiation for some Kubernetes storage solutions
